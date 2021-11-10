@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx
+    configs:
+      - source: unr-misc-nginx-config
+        target: /etc/nginx/nginx.conf
+    ports:
+      - target: 80
+        published: 34825
+        protocol: tcp
+
+configs:
+  mytest-nginx-config:
+    file: ./config/nginx/nginx.conf
+
