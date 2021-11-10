@@ -4,7 +4,7 @@ services:
   nginx:
     image: nginx
     configs:
-      - source: unr-misc-nginx-config
+      - source: mytest-nginx-config
         target: /etc/nginx/nginx.conf
     ports:
       - target: 80
